@@ -1,5 +1,7 @@
 # Learn-JPA-Cascade
-# how to use: startup then goto to check h2 database data & validate the reuslt
+
+how to use: startup then goto to http://localhost:8080/console/login.do?jsessionid=f53cdd4eff580a1922df88097fe36893 user:sa, password:123456 to check h2 database data & validate the reuslt
+
 three controller map to three senario with cascade persist & cascade remove, remove at @ManyToOne side, orphanRemoval = true
 
 CascadeType https://www.jianshu.com/p/e8caafce5445
@@ -50,8 +52,11 @@ CascadeType.REMOVE : 如果没有这个，以下删除employee的操作只删除
 
 orphanRemoval = true
 如果删除关系，是否删除关系上的实体
+
 https://blog.csdn.net/liyiming2017/article/details/90613707
+
 https://www.oschina.net/question/925076_157346
+
 https://stackoverflow.com/questions/18813341/what-is-the-difference-between-cascadetype-remove-and-orphanremoval-in-jpa
 
 例子是通过删除employee email list里面的一个email，然后保存就可以删除email table里面相应的数据。
